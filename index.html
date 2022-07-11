@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body style="background-color:skyblue;">
+    
+    <div id="content">
+        <h1>Your Home of Soccer Wordles⚽️🏆</h1>
+        <p style="font-weight: 700;color:darkblue"> Welcome to the arena of sports! The English Premier league. Where the world's best 20 teams battle it out! Let's see if you are the true soccer genius you claim you are.</p>
+        <div class ="image-thumbnails">
+            <img src="images/soccerfinal.jpeg"/> 
+             <img src="images/soccer10.jpeg"/>
+        </div>
+        <form action="/form-handler1" method="POST">
+            <input list="players" type="text" name="Guess" placeholder="Guess 1 of 6">
+            <datalist id="players">
+            <option>Messi</option>
+            <option>Ronaldo</option>
+            <option>Hazard</option>
+            <option>Kante</option>
+            <option>Neymar</option>
+            <option>Rudiger</option>
+            </datalist>
+        <div class ="container table-container">
+            <div class ="game-table">
+                <div class ="game-table_head">
+                    <div class ="game-table_row">
+                        <div class ="game-table_cell"></div>
+                        <div class ="game-table_cell">Player</div>
+                        <div class ="game-table_cell"> Club </div>
+                        <div class ="game-table_cell"> Age </div>
+                    </div>
+                </div>
+                <div class ="game-table_body">
+                    <div class ="game-table_row">
+                        <div class ="game-table_cell"></div>
+                            <div class ="text"> George Birikorang </div>
+                        <div class ="game-table_cell"></div>
+                            <div class ="text"> Real Madrid </div>
+                        <div class ="game-table_cell"></div>
+                            <div class ="text"> Age </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
