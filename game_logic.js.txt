@@ -1,0 +1,102 @@
+
+// clean data, split position string into array
+for (let i = 0; i < playerData.length; i++) {
+    playerData[i].Position = playerData[i].Position.split(',');
+}
+
+// randomly select valid player from playerData
+var player = playerData[0];
+
+// this variable is passed in from George's UI
+var guess = 'Mason Mount'
+
+// initiaties color variables for each category, these will change with each guess
+var name_color = 'Gray';
+var club_color = 'Gray';
+var position_color = 'Gray';
+var goal_color = 'Gray';
+var assist_color = 'Gray';
+var age_color = 'Gray';
+
+// counts the number of guesses to finish
+var count_guesses = 0;
+
+// keeps track if whether finished
+var finished = false;
+
+// stores data on guess from playerData
+var guessData
+
+while (!finished) {
+
+	// *** NEED TO PROMPT USER FOR GUESS
+	// discuss with George on how to connect this to UI
+	
+	// increments guess counter
+	count_guesses++;
+		
+	// iterates through dataset and searches for match (name match, 20+ starts)
+    	for (let i = 0; i < playerData.length; i++) {
+        	if (Object.values(playerData[i]).includes(guess) && playerData[i].Starts >= 20) {
+			// if match found, store data in var for easier access
+			guessData  = playerData[i]
+			} 	
+    	}
+		
+	// if no match found, throw InvalidPlayer error
+	if (Object.keys(guessData).length == 0) {
+	 	console.log('Invalid Guess') // need a better way to handle this
+	} else {
+		if (guessData.Name == player.Name) {
+			finished = true;
+			name_color = 'Green';
+			club_color = 'Green';
+			position_color = 'Green'
+			goal_color = 'Green';
+			assist_color = 'Green';
+			age_color = 'Green';
+		} else {
+			// check club
+			if (guessData.Club == player.Club) {
+				club_green = true;
+			}
+			
+			// check position
+			
+			for (let i = 0; i < guessData.Position.length; i++) {
+				// position marked as correct if any of the guess's positions match the player's positions
+				if (playerData.Position.includes(guessData.position[i])) {
+					position_color = 'Green'
+				}
+			}
+			
+			// check goals
+			var goal_dif = Math.abs(guessData.Goals - player.Goals);
+			if (goal_dif == 0) {
+				goal_color = 'Green';
+			} else if (goal_dif <= 5) {
+				goal_color = 'Yellow';
+			}	
+			
+			// check assists
+			var assist_dif = Math.abs(guessData.Assists - player.Assists);
+			if (assist_dif == 0) {
+				assist_color = 'Green';
+			} else if (assist_dif <= 5) {
+				assist_color = 'Yellow';
+			}	
+			
+			// check age
+			var age_dif = Math.abs(guessData.Age - player.Age);
+			if (age_dif == 0) {
+				age_color = 'Green';
+			} else if (age_dif <= 3) {
+				age_color = 'Yellow'
+			}
+		}
+	}	
+}
+
+	
+
+
