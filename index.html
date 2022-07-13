@@ -1,16 +1,559 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Soccer Wordle</title>
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="app.js"></script>
 </head>
-<body onload="load()">
-<div id="myform">
-<b>Soccer Wordle</b>
+<!-- <body onload="load()"> -->
+<body style="background-color:skyblue;">
+
+    <div id="content">
+        <h1>Your Home of Soccer Wordles⚽️🏆</h1>
+        <p style="font-weight: 700;color:darkblue"> Welcome to the arena of sports! The English Premier league. Where the world's best 20 teams battle it out! Let's see if you are the true soccer genius you claim you are.</p>
+        <div class ="image-thumbnails">
+            <img src="soccerfinal.jpeg"/> 
+                <img src="soccer10.jpeg"/>
+        </div>
 <table>
     <tr>
-        <td>Name:</td>
-        <td><input type="text" id="name">
+        <td>Guess a player:</td>
+        <td><input list="players" type="text" id="name" placeholder="Guess here">
+            <datalist id="players">
+                <option>Mason Mount</option>
+                <option>Edouard Mendy</option>
+                <option>Timo Werner</option>
+                <option>Ben Chilwell</option>
+                <option>Reece James</option>
+                <option>C√©sar Azpilicueta</option>
+                <option>N'Golo Kant√©</option>
+                <option>Jorginho</option>
+                <option>Thiago Silva</option>
+                <option>Kurt Zouma</option>
+                <option>Mateo Kovaƒçiƒá</option>
+                <option>Antonio R√ºdiger</option>
+                <option>Christian Pulisic</option>
+                <option>Kai Havertz</option>
+                <option>Andreas Christensen</option>
+                <option>Hakim Ziyech</option>
+                <option>Tammy Abraham</option>
+                <option>Marcos Alonso</option>
+                <option>Callum Hudson-Odoi</option>
+                <option>Olivier Giroud</option>
+                <option>Kepa Arrizabalaga</option>
+                <option>Billy Gilmour</option>
+                <option>Willy Caballero</option>
+                <option>Ruben Loftus-Cheek</option>
+                <option>Emerson Palmieri</option>
+                <option>Fikayo Tomori</option>
+                <option>Ross Barkley</option>
+                <option>Ederson</option>
+                <option>R√∫ben Dias</option>
+                <option>Rodri</option>
+                <option>Raheem Sterling</option>
+                <option>Jo√£o Cancelo</option>
+                <option>Bernardo Silva</option>
+                <option>ƒ∞lkay G√ºndoƒüan</option>
+                <option>Kevin De Bruyne</option>
+                <option>Riyad Mahrez</option>
+                <option>Gabriel Jesus</option>
+                <option>Kyle Walker</option>
+                <option>John Stones</option>
+                <option>Phil Foden</option>
+                <option>Oleksandr Zinchenko</option>
+                <option>Ferr√°n Torres</option>
+                <option>Aymeric Laporte</option>
+                <option>Fernandinho</option>
+                <option>Benjamin Mendy</option>
+                <option>Nathan Ak√©</option>
+                <option>Sergio Ag√ºero</option>
+                <option>Eric Garc√≠a</option>
+                <option>Scott Carson</option>
+                <option>Zack Steffen</option>
+                <option>Liam Delap</option>
+                <option>Bruno Fernandes</option>
+                <option>Aaron Wan-Bissaka</option>
+                <option>Harry Maguire</option>
+                <option>Marcus Rashford</option>
+                <option>Luke Shaw</option>
+                <option>Victor Lindel√∂f</option>
+                <option>Fred</option>
+                <option>David de Gea</option>
+                <option>Scott McTominay</option>
+                <option>Paul Pogba</option>
+                <option>Mason Greenwood</option>
+                <option>Anthony Martial</option>
+                <option>Edinson Cavani</option>
+                <option>Dean Henderson</option>
+                <option>Nemanja Matiƒá</option>
+                <option>Daniel James</option>
+                <option>Eric Bailly</option>
+                <option>Alex Telles</option>
+                <option>Juan Mata</option>
+                <option>Donny van de Beek</option>
+                <option>Axel Tuanzebe</option>
+                <option>Brandon Williams</option>
+                <option>Amad Diallo</option>
+                <option>Anthony Elanga</option>
+                <option>Timothy Fosu-Mensah</option>
+                <option>Shola Shoretire</option>
+                <option>Odion Ighalo</option>
+                <option>Hannibal Mejbri</option>
+                <option>William Thomas Fish</option>
+                <option>Andrew Robertson</option>
+                <option>Mohamed Salah</option>
+                <option>Trent Alexander-Arnold</option>
+                <option>Georginio Wijnaldum</option>
+                <option>Alisson</option>
+                <option>Roberto Firmino</option>
+                <option>Sadio Man√©</option>
+                <option>Fabinho</option>
+                <option>Thiago Alc√°ntara</option>
+                <option>Jordan Henderson</option>
+                <option>Nathaniel Phillips</option>
+                <option>Curtis Jones</option>
+                <option>Diogo Jota</option>
+                <option>James Milner</option>
+                <option>Ozan Kabak</option>
+                <option>Jo√´l Matip</option>
+                <option>Rhys Williams</option>
+                <option>Naby Ke√Øta</option>
+                <option>Joe Gomez</option>
+                <option>Xherdan Shaqiri</option>
+                <option>Virgil van Dijk</option>
+                <option>Adri√°n</option>
+                <option>Neco Williams</option>
+                <option>Takumi Minamino</option>
+                <option>Alex Oxlade-Chamberlain</option>
+                <option>Divock Origi</option>
+                <option>Caoimh√≠n Kelleher</option>
+                <option>Kostas Tsimikas</option>
+                <option>Kasper Schmeichel</option>
+                <option>Youri Tielemans</option>
+                <option>Jamie Vardy</option>
+                <option>Jonny Evans</option>
+                <option>Timothy Castagne</option>
+                <option>Wesley Fofana</option>
+                <option>Wilfred Ndidi</option>
+                <option>James Maddison</option>
+                <option>James Justin</option>
+                <option>Harvey Barnes</option>
+                <option>√áaƒülar S√∂y√ºnc√º</option>
+                <option>Marc Albrighton</option>
+                <option>Kelechi Iheanacho</option>
+                <option>Nampalys Mendy</option>
+                <option>Ayoze P√©rez</option>
+                <option>Luke Thomas</option>
+                <option>Ricardo Pereira</option>
+                <option>Dennis Praet</option>
+                <option>Daniel Amartey</option>
+                <option>Christian Fuchs</option>
+                <option>Hamza Choudhury</option>
+                <option>Cengiz √únder</option>
+                <option>Sidnei Tavares</option>
+                <option>Islam Slimani</option>
+                <option>Demarai Gray</option>
+                <option>Wes Morgan</option>
+                <option>Khanya Leshabela</option>
+                <option>Tom√°≈° Souƒçek</option>
+                <option>Aaron Cresswell</option>
+                <option>≈Åukasz Fabia≈Ñski</option>
+                <option>Vladim√≠r Coufal</option>
+                <option>Declan Rice</option>
+                <option>Pablo Fornals</option>
+                <option>Jarrod Bowen</option>
+                <option>Angelo Ogbonna</option>
+                <option>Michail Antonio</option>
+                <option>Craig Dawson</option>
+                <option>Jesse Lingard</option>
+                <option>Issa Diop</option>
+                <option>Sa√Ød Benrahma</option>
+                <option>Fabi√°n Balbuena</option>
+                <option>Arthur Masuaku</option>
+                <option>S√©bastien Haller</option>
+                <option>Mark Noble</option>
+                <option>Ryan Fredericks</option>
+                <option>Manuel Lanzini</option>
+                <option>Ben Johnson</option>
+                <option>Darren Randolph</option>
+                <option>Andriy Yarmolenko</option>
+                <option>Robert Snodgrass</option>
+                <option>Felipe Anderson</option>
+                <option>Pierre H√∏jbjerg</option>
+                <option>Hugo Lloris</option>
+                <option>Son Heung-min</option>
+                <option>Harry Kane</option>
+                <option>Eric Dier</option>
+                <option>Tanguy Ndombele</option>
+                <option>Sergio Reguil√≥n</option>
+                <option>Toby Alderweireld</option>
+                <option>Serge Aurier</option>
+                <option>Davinson S√°nchez</option>
+                <option>Moussa Sissoko</option>
+                <option>Lucas Moura</option>
+                <option>Ben Davies</option>
+                <option>Matt Doherty</option>
+                <option>Steven Bergwijn</option>
+                <option>Giovani Lo Celso</option>
+                <option>Gareth Bale</option>
+                <option>Harry Winks</option>
+                <option>Joe Rodon</option>
+                <option>Dele Alli</option>
+                <option>Japhet Tanganga</option>
+                <option>√ârik Lamela</option>
+                <option>Carlos Vin√≠cius</option>
+                <option>Dane Scarlett</option>
+                <option>Bernd Leno</option>
+                <option>Bukayo Saka</option>
+                <option>Granit Xhaka</option>
+                <option>Rob Holding</option>
+                <option>Pierre-Emerick Aubameyang</option>
+                <option>Kieran Tierney</option>
+                <option>H√©ctor Beller√≠n</option>
+                <option>Gabriel Dos Santos</option>
+                <option>Alexandre Lacazette</option>
+                <option>Thomas Partey</option>
+                <option>Emile Smith-Rowe</option>
+                <option>Dani Ceballos</option>
+                <option>Mohamed Elneny</option>
+                <option>David Luiz</option>
+                <option>Nicolas P√©p√©</option>
+                <option>Willian</option>
+                <option>Pablo Mar√≠</option>
+                <option>Martin √òdegaard</option>
+                <option>Calum Chambers</option>
+                <option>C√©dric Soares</option>
+                <option>Martinelli</option>
+                <option>Ainsley Maitland-Niles</option>
+                <option>Eddie Nketiah</option>
+                <option>Mathew Ryan</option>
+                <option>Joe Willock</option>
+                <option>Sead Kola≈°inac</option>
+                <option>Reiss Nelson</option>
+                <option>Shkodran Mustafi</option>
+                <option>R√∫nar Alex R√∫narsson</option>
+                <option>Stuart Dallas</option>
+                <option>Luke Ayling</option>
+                <option>Patrick Bamford</option>
+                <option>Illan Meslier</option>
+                <option>Jack Harrison</option>
+                <option>Ezgjan Alioski</option>
+                <option>Kalvin Phillips</option>
+                <option>Mateusz Klich</option>
+                <option>Raphael Dias Belloli</option>
+                <option>Liam Cooper</option>
+                <option>Pascal Struijk</option>
+                <option>Tyler Roberts</option>
+                <option>Rodrigo</option>
+                <option>Diego Llorente</option>
+                <option>H√©lder Costa</option>
+                <option>Robin Koch</option>
+                <option>Jamie Shackleton</option>
+                <option>Pablo Hern√°ndez</option>
+                <option>Kiko Casilla</option>
+                <option>Gaetano Berardi</option>
+                <option>Ian Carlo Poveda</option>
+                <option>Niall Huggins</option>
+                <option>Leif Davis</option>
+                <option>Michael Keane</option>
+                <option>Richarlison</option>
+                <option>Dominic Calvert-Lewin</option>
+                <option>Jordan Pickford</option>
+                <option>Lucas Digne</option>
+                <option>Ben Godfrey</option>
+                <option>Abdoulaye Doucour√©</option>
+                <option>Mason Holgate</option>
+                <option>Gylfi Sigur√∞sson</option>
+                <option>Allan</option>
+                <option>Yerry Mina</option>
+                <option>James Rodr√≠guez</option>
+                <option>S√©amus Coleman</option>
+                <option>Andr√© Gomes</option>
+                <option>Alex Iwobi</option>
+                <option>Tom Davies</option>
+                <option>Robin Olsen</option>
+                <option>Bernard</option>
+                <option>Fabian Delph</option>
+                <option>Anthony Gordon</option>
+                <option>Niels Nkounkou</option>
+                <option>Jonjoe Kenny</option>
+                <option>Joshua King</option>
+                <option>Cenk Tosun</option>
+                <option>Jo√£o Virg√≠nia</option>
+                <option>Moise Kean</option>
+                <option>Theo Walcott</option>
+                <option>Jean-Philippe Gbamin</option>
+                <option>Nathan Broadhead</option>
+                <option>Emiliano Mart√≠nez</option>
+                <option>Matt Targett</option>
+                <option>John McGinn</option>
+                <option>Ollie Watkins</option>
+                <option>Tyrone Mings</option>
+                <option>Ezri Konsa</option>
+                <option>Douglas Luiz</option>
+                <option>Bertrand Traor√©</option>
+                <option>Matty Cash</option>
+                <option>Jack Grealish</option>
+                <option>Ross Barkley</option>
+                <option>Anwar El Ghazi</option>
+                <option>Tr√©z√©guet</option>
+                <option>Marvelous Nakamba</option>
+                <option>Ahmed Elmohamady</option>
+                <option>Kortney Hause</option>
+                <option>Jacob Ramsey</option>
+                <option>Morgan Sanson</option>
+                <option>Conor Hourihane</option>
+                <option>Keinan Davis</option>
+                <option>Carney Chukwuemeka</option>
+                <option>Wesley Moraes</option>
+                <option>Neil Taylor</option>
+                <option>Jaden Philogene Bidace</option>
+                <option>Jonjo Shelvey</option>
+                <option>Miguel Almir√≥n</option>
+                <option>Karl Darlow</option>
+                <option>Federico Fern√°ndez</option>
+                <option>Callum Wilson</option>
+                <option>Joelinton</option>
+                <option>Isaac Hayden</option>
+                <option>Ciaran Clark</option>
+                <option>Jamal Lewis</option>
+                <option>Jamaal Lascelles</option>
+                <option>Allan Saint-Maximin</option>
+                <option>Jacob Murphy</option>
+                <option>Jeff Hendrick</option>
+                <option>Sean Longstaff</option>
+                <option>Matt Ritchie</option>
+                <option>Emil Krafth</option>
+                <option>Paul Dummett</option>
+                <option>Fabian Sch√§r</option>
+                <option>Martin D√∫bravka</option>
+                <option>Joe Willock</option>
+                <option>Javier Manquillo</option>
+                <option>Ryan Fraser</option>
+                <option>DeAndre Yedlin</option>
+                <option>Dwight Gayle</option>
+                <option>Andy Carroll</option>
+                <option>Matthew Longstaff</option>
+                <option>Elliot Anderson</option>
+                <option>Rui Patr√≠cio</option>
+                <option>Conor Coady</option>
+                <option>N√©lson Semedo</option>
+                <option>R√∫ben Neves</option>
+                <option>Pedro Neto</option>
+                <option>Adama Traor√©</option>
+                <option>Jo√£o Moutinho</option>
+                <option>Leander Dendoncker</option>
+                <option>Romain Sa√Øss</option>
+                <option>Daniel Podence</option>
+                <option>Willy Boly</option>
+                <option>Rayan A√Øt Nouri</option>
+                <option>Max Kilman</option>
+                <option>Willian Jos√©</option>
+                <option>F√°bio Silva</option>
+                <option>Ra√∫l Jim√©nez</option>
+                <option>Fernando Mar√ßal</option>
+                <option>Jonny Castro</option>
+                <option>Ki-Jana Hoever</option>
+                <option>Vitinha</option>
+                <option>Morgan Gibbs-White</option>
+                <option>Owen Otasowie</option>
+                <option>R√∫ben Vinagre</option>
+                <option>John Ruddy</option>
+                <option>Patrick Cutrone</option>
+                <option>Oskar Buur</option>
+                <option>Theo Corbeanu</option>
+                <option>Vicente Guaita</option>
+                <option>Cheikhou Kouyat√©</option>
+                <option>Wilfried Zaha</option>
+                <option>Eberechi Eze</option>
+                <option>Luka Milivojeviƒá</option>
+                <option>Andros Townsend</option>
+                <option>Joel Ward</option>
+                <option>Jordan Ayew</option>
+                <option>Christian Benteke</option>
+                <option>Gary Cahill</option>
+                <option>Patrick van Aanholt</option>
+                <option>Ja√Øro Riedewald</option>
+                <option>Tyrick Mitchell</option>
+                <option>James McArthur</option>
+                <option>Jeffrey Schlupp</option>
+                <option>Scott Dann</option>
+                <option>Nathaniel Clyne</option>
+                <option>James McCarthy</option>
+                <option>Michy Batshuayi</option>
+                <option>James Tomkins</option>
+                <option>Mamadou Sakho</option>
+                <option>Jean-Philippe Mateta</option>
+                <option>Jack Butland</option>
+                <option>Martin Kelly</option>
+                <option>James Ward-Prowse</option>
+                <option>Jan Bednarek</option>
+                <option>Stuart Armstrong</option>
+                <option>Alex McCarthy</option>
+                <option>Che Adams</option>
+                <option>Kyle Walker-Peters</option>
+                <option>Ryan Bertrand</option>
+                <option>Jannik Vestergaard</option>
+                <option>Danny Ings</option>
+                <option>Oriol Romeu</option>
+                <option>Theo Walcott</option>
+                <option>Nathan Redmond</option>
+                <option>Jack Stephens</option>
+                <option>Moussa Djenepo</option>
+                <option>Ibrahima Diallo</option>
+                <option>Takumi Minamino</option>
+                <option>Mohammed Salisu</option>
+                <option>Fraser Forster</option>
+                <option>Nathan Tella</option>
+                <option>William Smallbone</option>
+                <option>Shane Long</option>
+                <option>Yan Valery</option>
+                <option>Kayne Ramsey</option>
+                <option>Jake Vokins</option>
+                <option>Alexandre Jankewitz</option>
+                <option>Dan Nlundulu</option>
+                <option>Michael Obafemi</option>
+                <option>Caleb Watts</option>
+                <option>Allan Tchaptchet</option>
+                <option>Ben White</option>
+                <option>Yves Bissouma</option>
+                <option>Lewis Dunk</option>
+                <option>Leandro Trossard</option>
+                <option>Adam Webster</option>
+                <option>Neal Maupay</option>
+                <option>Pascal Gro√ü</option>
+                <option>Robert S√°nchez</option>
+                <option>Jo√´l Veltman</option>
+                <option>Dan Burn</option>
+                <option>Solly March</option>
+                <option>Danny Welbeck</option>
+                <option>Adam Lallana</option>
+                <option>Alexis Mac Allister</option>
+                <option>Mathew Ryan</option>
+                <option>Tariq Lamptey</option>
+                <option>Steven Alzate</option>
+                <option>Aaron Connolly</option>
+                <option>Jakub Moder</option>
+                <option>Alireza Jahanbakhsh</option>
+                <option>Davy Pr√∂pper</option>
+                <option>Bernardo</option>
+                <option>Percy Tau</option>
+                <option>Andi Zeqiri</option>
+                <option>Jos√© Izquierdo</option>
+                <option>Reda Khadra</option>
+                <option>Jayson Molumby</option>
+                <option>Ashley Westwood</option>
+                <option>James Tarkowski</option>
+                <option>Dwight McNeil</option>
+                <option>Matthew Lowton</option>
+                <option>Nick Pope</option>
+                <option>Josh Brownhill</option>
+                <option>Chris Wood</option>
+                <option>Ben Mee</option>
+                <option>Charlie Taylor</option>
+                <option>J√≥hann Berg Gu√∞mundsson</option>
+                <option>Matƒõj Vydra</option>
+                <option>Jack Cork</option>
+                <option>Ashley Barnes</option>
+                <option>Erik Pieters</option>
+                <option>Jay Rodriguez</option>
+                <option>Robbie Brady</option>
+                <option>Kevin Long</option>
+                <option>Bailey Peacock-Farrell</option>
+                <option>Phil Bardsley</option>
+                <option>Jimmy Dunne</option>
+                <option>Dale Stephens</option>
+                <option>Josh Benson</option>
+                <option>Will Norris</option>
+                <option>Joel Mumbongo</option>
+                <option>Lewis Richardson</option>
+                <option>Alphonse Areola</option>
+                <option>Tosin Adarabioyo</option>
+                <option>Ademola Lookman</option>
+                <option>Ola Aina</option>
+                <option>Joachim Andersen</option>
+                <option>Andre-Frank Zambo Anguissa</option>
+                <option>Bobby Reid</option>
+                <option>Ivan Cavaleiro</option>
+                <option>Harrison Reed</option>
+                <option>Antonee Robinson</option>
+                <option>Ruben Loftus-Cheek</option>
+                <option>Mario Lemina</option>
+                <option>Kenny Tete</option>
+                <option>Aleksandar Mitroviƒá</option>
+                <option>Josh Maja</option>
+                <option>Tom Cairney</option>
+                <option>Joe Bryan</option>
+                <option>Tim Ream</option>
+                <option>Josh Onomah</option>
+                <option>Denis Odoi</option>
+                <option>Michael Hector</option>
+                <option>Fabio Carvalho</option>
+                <option>Aboubakar Kamara</option>
+                <option>Marek Rod√°k</option>
+                <option>Maxime Le Marchand</option>
+                <option>Neeskens Kebano</option>
+                <option>Terence Kongolo</option>
+                <option>Tyrese Francois</option>
+                <option>Sam Johnstone</option>
+                <option>Darnell Furlong</option>
+                <option>Semi Ajayi</option>
+                <option>Matheus Pereira</option>
+                <option>Kyle Bartley</option>
+                <option>Conor Gallagher</option>
+                <option>Conor Townsend</option>
+                <option>Dara O'Shea</option>
+                <option>Matt Phillips</option>
+                <option>Callum Robinson</option>
+                <option>Romaine Sawyers</option>
+                <option>Okay Yoku≈ülu</option>
+                <option>Jake Livermore</option>
+                <option>Grady Diangana</option>
+                <option>Ainsley Maitland-Niles</option>
+                <option>Mbaye Diagne</option>
+                <option>Karlan Grant</option>
+                <option>Kieran Gibbs</option>
+                <option>Branislav Ivanoviƒá</option>
+                <option>Robert Snodgrass</option>
+                <option>Filip Krovinoviƒá</option>
+                <option>Lee Peltier</option>
+                <option>Hal Robson-Kanu</option>
+                <option>Kamil Grosicki</option>
+                <option>Kyle Edwards</option>
+                <option>David Button</option>
+                <option>Ahmed Hegazi</option>
+                <option>Charlie Austin</option>
+                <option>Sam Field</option>
+                <option>Rekeem Harper</option>
+                <option>Aaron Ramsdale</option>
+                <option>George Baldock</option>
+                <option>Chris Basham</option>
+                <option>Enda Stevens</option>
+                <option>John Egan</option>
+                <option>John Fleck</option>
+                <option>David McGoldrick</option>
+                <option>Oliver Norwood</option>
+                <option>Ethan Ampadu</option>
+                <option>John Lundstram</option>
+                <option>Ben Osborn</option>
+                <option>Oliver Burke</option>
+                <option>Sander Berge</option>
+                <option>Oliver McBurnie</option>
+                <option>Rhian Brewster</option>
+                <option>Jayden Bogle</option>
+                <option>Kean Bryan</option>
+                <option>Jack Robinson</option>
+                <option>Billy Sharp</option>
+                <option>Max Lowe</option>
+                <option>Phil Jagielka</option>
+                <option>Daniel Jebbison</option>
+                <option>Lys Mousset</option>
+                <option>Jack O'Connell</option>
+                <option>Iliman Ndiaye</option>
+                <option>Antwoine Hackford</option>
+                <option>Femi Seriki</option>
+            </datalist>
         <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
     </tr>
     <tr>
@@ -19,21 +562,21 @@
     </tr>
 </table>
 </div>
-<div id="mydata">
-    <b>Guesses...</b>
+<div id="mydata" >
+    <b>Wordle</b>
     <table id="myTableData"  border="1" cellpadding="2">
         <tr>
-            <td><b>Delete</b></td>
-            <td><b>Name</b></td>
-            <td><b>Club</b></td>
-            <td><b>Nationality</b></td>
-            <td><b>Position</b></td>
-            <td><b>Age</b></td>
-            <td><b>Matches</b></td>
-            <td><b>Starts</b></td>
-            <td><b>Mins</b></td>
-            <td><b>Goals</b></td>
-            <td><b>Assists</b></td>
+            <!-- <td><b>Delete</b></td> -->
+            <td><b> Name </b></td>
+            <td><b> Club </b></td>
+            <td><b> Nationality </b></td>
+            <td><b> Position </b></td>
+            <td><b> Age </b></td>
+            <td><b> Matches </b></td>
+            <td><b> Starts </b></td>
+            <td><b> Mins </b></td>
+            <td><b> Goals </b></td>
+            <td><b> Assists </b></td>
         </tr>
     </table>
     &nbsp;
