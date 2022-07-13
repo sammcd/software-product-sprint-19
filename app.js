@@ -6,13 +6,7 @@ var color2 = "#e3db0b"; //yellow
 
 // //have to call this function to get the random player
 // function getPlayer(){
-//     // clean data, split position string into array
-//     for (let i = 0; i < playerData.length; i++) {
-//         playerData[i].Position = playerData[i].Position.split(',');
-//     }
-
 //     // randomly select valid player from playerData
-//     var player = playerData[0];
 // }
 
 function addRow() {
@@ -82,16 +76,25 @@ function addRow() {
         if (guessData.Club == player.Club) {
             club_color = color1;
         }
+
+        // check nationality
+        if (guessData.Nationality == player.Nationality) {
+            nationality_color = color1;
+        }
         
-        // check position
+        //check position
         // THERE'S A BUG HERE!
+        // clean data, split position string into array     // edge case, how about the guessed player has two positions like the selected player
+        // for (let i = 0; i < playerData.length; i++) {
+        //     playerData[i].Position = playerData[i].Position.split(',');
+        // }
         // for (let i = 0; i < guessData.Position.length; i++) { 
         //     // position marked as correct if any of the guess's positions match the player's positions
-        //     if (playerData.Position.includes(guessData.position[i])) {
+        //     if (playerData.Position.includes(guessData.Position[i])) {
         //         position_color = color1;
         //     }
         // }
-        
+            
         // check goals
         var goal_dif = Math.abs(guessData.Goals - player.Goals);
         if (goal_dif == 0) {
@@ -104,7 +107,7 @@ function addRow() {
         var assist_dif = Math.abs(guessData.Assists - player.Assists);
         if (assist_dif == 0) {
             assist_color = color1;
-        } else if (assist_dif <= 5) {
+        } else if (assist_dif <= 2) {
             assist_color = color2;
         }	
         
@@ -115,6 +118,31 @@ function addRow() {
         } else if (age_dif <= 3) {
             age_color = color2;
         }
+
+         // check matches
+        var matches_dif = Math.abs(guessData.Matches - player.Matches);
+        if (matches_dif == 0) {
+            matches_color = color1;
+        } else if (matches_dif <= 3) {
+            matches_color = color2;
+        }
+
+        // check starts
+        var starts_dif = Math.abs(guessData.Starts - player.Starts);
+        if (starts_dif == 0) {
+            starts_color = color1;
+        } else if (starts_dif <= 3) {
+            starts_color = color2;
+        }
+
+        // check mins
+        var mins_dif = Math.abs(guessData.Mins - player.Mins);
+        if (mins_dif == 0) {
+            mins_color = color1;
+        } else if (mins_dif <= 200) {
+            mins_color = color2;
+        }
+
     }
 
     var table = document.getElementById("myTableData");
