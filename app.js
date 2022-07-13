@@ -26,17 +26,17 @@ function addRow() {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
  
-    row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
-    row.insertCell(1).innerHTML= playerName;
-    row.insertCell(2).innerHTML= playerclub;
-    row.insertCell(3).innerHTML= playerNationality;
-    row.insertCell(4).innerHTML= playerPosition;
-    row.insertCell(5).innerHTML= playerAge;
-    row.insertCell(6).innerHTML= playerMatches;
-    row.insertCell(7).innerHTML= playerStarts;
-    row.insertCell(8).innerHTML= playerMins;
-    row.insertCell(9).innerHTML= playerGoals;
-    row.insertCell(10).innerHTML= playerAssists;
+     // row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(0).innerHTML= playerName; 
+    row.insertCell(1).innerHTML= playerclub;
+    row.insertCell(2).innerHTML= playerNationality;
+    row.insertCell(3).innerHTML= playerPosition;
+    row.insertCell(4).innerHTML= playerAge;
+    row.insertCell(5).innerHTML= playerMatches;
+    row.insertCell(6).innerHTML= playerStarts;
+    row.insertCell(7).innerHTML= playerMins;
+    row.insertCell(8).innerHTML= playerGoals;
+    row.insertCell(9).innerHTML= playerAssists;
 
 }
  
