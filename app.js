@@ -1,3 +1,20 @@
+var count_guesses = 0;
+var finished = false;
+var color1 = "#2e9e07"; //green
+var color2 = "#e3db0b"; //yellow
+
+
+// //have to call this function to get the random player
+// function getPlayer(){
+//     // clean data, split position string into array
+//     for (let i = 0; i < playerData.length; i++) {
+//         playerData[i].Position = playerData[i].Position.split(',');
+//     }
+
+//     // randomly select valid player from playerData
+//     var player = playerData[0];
+// }
+
 function addRow() {
     var playerNameinput = document.getElementById("name");
     var player_guessed=playerData[0]; 
@@ -20,26 +37,105 @@ function addRow() {
     var playerAssists=getAssists(player_guessed);
 
 
+    //will be taken out after the first function is figured out [DELETE!!!!  later]
+    var player = playerData[0];
+
+    // this variable is passed in from the User
+    var guess = playerName;
+
+    // initiaties color variables for each category, these will change with each guess
+    var name_color = "#87CEEB";
+    var club_color = "#87CEEB";
+    var position_color = "#87CEEB";
+    var goal_color = "#87CEEB";
+    var assist_color = "#87CEEB";
+    var age_color = "#87CEEB";
+    var nationality_color = "#87CEEB";
+    var mins_color = "#87CEEB";
+    var starts_color = "#87CEEB";
+    var matches_color = "#87CEEB";
+
+    // counts the number of guesses to finish
+    // keeps track if whether finished
+    if (count_guesses == 8) {
+        finished = true;
+    } else {
+        count_guesses ++;
+    }
+     
+    var guessData = player_guessed;
+
+    if (guessData.Name == player.Name) {
+        finished = true;
+        name_color = color1;
+        club_color = color1;
+        position_color = color1;
+        goal_color = color1;
+        assist_color = color1;
+        age_color = color1;
+        matches_color = color1;
+        nationality_color = color1;
+        starts_color = color1;
+        mins_color = color1;
+    } else {
+        // check club
+        if (guessData.Club == player.Club) {
+            club_color = color1;
+        }
+        
+        // check position
+        // THERE'S A BUG HERE!
+        // for (let i = 0; i < guessData.Position.length; i++) { 
+        //     // position marked as correct if any of the guess's positions match the player's positions
+        //     if (playerData.Position.includes(guessData.position[i])) {
+        //         position_color = color1;
+        //     }
+        // }
+        
+        // check goals
+        var goal_dif = Math.abs(guessData.Goals - player.Goals);
+        if (goal_dif == 0) {
+            goal_color = color1;
+        } else if (goal_dif <= 5) {
+            goal_color = color2;
+        }	
+        
+        // check assists
+        var assist_dif = Math.abs(guessData.Assists - player.Assists);
+        if (assist_dif == 0) {
+            assist_color = color1;
+        } else if (assist_dif <= 5) {
+            assist_color = color2;
+        }	
+        
+        // check age
+        var age_dif = Math.abs(guessData.Age - player.Age);
+        if (age_dif == 0) {
+            age_color = color1;
+        } else if (age_dif <= 3) {
+            age_color = color2;
+        }
+    }
 
     var table = document.getElementById("myTableData");
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
- 
-     // row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
-    row.insertCell(0).innerHTML= playerName; 
-    row.insertCell(1).innerHTML= playerclub;
-    row.insertCell(2).innerHTML= playerNationality;
-    row.insertCell(3).innerHTML= playerPosition;
-    row.insertCell(4).innerHTML= playerAge;
-    row.insertCell(5).innerHTML= playerMatches;
-    row.insertCell(6).innerHTML= playerStarts;
-    row.insertCell(7).innerHTML= playerMins;
-    row.insertCell(8).innerHTML= playerGoals;
-    row.insertCell(9).innerHTML= playerAssists;
+
+    // row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(0).innerHTML= '<input value="' +  playerName +'"'+ 'style="background-color:' + name_color+ '">';
+    row.insertCell(1).innerHTML= '<input value="' +  playerclub +'"'+ 'style="background-color:' + club_color+ '">';
+    row.insertCell(2).innerHTML= '<input value="' +  playerNationality +'"'+ 'style="background-color:' + nationality_color+ '">';
+    row.insertCell(3).innerHTML= '<input value="' +  playerPosition +'"'+ 'style="background-color:' + position_color+ '">';
+    row.insertCell(4).innerHTML= '<input value="' +  playerAge +'"'+ 'style="background-color:' + age_color + '">';
+    row.insertCell(5).innerHTML= '<input value="' +  playerMatches +'"'+ 'style="background-color:' + matches_color+ '">';
+    row.insertCell(6).innerHTML= '<input value="' +  playerStarts +'"'+ 'style="background-color:' + starts_color + '">';
+    row.insertCell(7).innerHTML= '<input value="' +  playerMins +'"'+ 'style="background-color:' + mins_color + '">';
+    row.insertCell(8).innerHTML= '<input value="' +  playerGoals +'"'+ 'style="background-color:' + goal_color + '">';
+    row.insertCell(9).innerHTML= '<input value="' +  playerAssists +'"'+ 'style="background-color:' + assist_color+ '">';
 
 }
- 
+
 function deleteRow(obj) {
       
     var index = obj.parentNode.parentNode.rowIndex;
@@ -10745,4 +10841,3 @@ function getYellow_Cards(player){
 function getRed_Cards(player){
     return(player.Red_Cards)
 }
-
