@@ -1,3 +1,5 @@
+
+
 var count_guesses = 0;
 var finished = false;
 var color1 = "#2e9e07"; //green
@@ -179,6 +181,7 @@ function load() {
  
 }
 
+
 playerData=[
     {
         "Name": "Mason Mount",
@@ -281,7 +284,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "C√©sar Azpilicueta",
+        "Name": "Cesar Azpilicueta",
         "Club": "Chelsea",
         "Nationality": "ESP",
         "Position": "DF",
@@ -301,7 +304,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "N'Golo Kant√©",
+        "Name": "N'Golo Kante",
         "Club": "Chelsea",
         "Nationality": "FRA",
         "Position": "MF",
@@ -401,7 +404,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Antonio R√ºdiger",
+        "Name": "Antonio Rudiger",
         "Club": "Chelsea",
         "Nationality": "GER",
         "Position": "DF",
@@ -741,7 +744,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "R√∫ben Dias",
+        "Name": "Ruben Dias",
         "Club": "Manchester City",
         "Nationality": "POR",
         "Position": "DF",
@@ -801,7 +804,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jo√£o Cancelo",
+        "Name": "Joao Cancelo",
         "Club": "Manchester City",
         "Nationality": "POR",
         "Position": "DF",
@@ -841,7 +844,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "ƒ∞lkay G√ºndoƒüan",
+        "Name": "Ilkay Gündogan",
         "Club": "Manchester City",
         "Nationality": "GER",
         "Position": "MF",
@@ -1001,7 +1004,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Ferr√°n Torres",
+        "Name": "Ferrun Torres",
         "Club": "Manchester City",
         "Nationality": "ESP",
         "Position": "FW,MF",
@@ -1081,7 +1084,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Nathan Ak√©",
+        "Name": "Nathan Ake",
         "Club": "Manchester City",
         "Nationality": "NED",
         "Position": "DF",
@@ -1101,7 +1104,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Sergio Ag√ºero",
+        "Name": "Sergio Aguero",
         "Club": "Manchester City",
         "Nationality": "ARG",
         "Position": "FW,MF",
@@ -1121,7 +1124,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Eric Garc√≠a",
+        "Name": "Eric Garcia",
         "Club": "Manchester City",
         "Nationality": "ESP",
         "Position": "DF",
@@ -1301,7 +1304,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Victor Lindel√∂f",
+        "Name": "Victor Lindelof",
         "Club": "Manchester United",
         "Nationality": "SWE",
         "Position": "DF",
@@ -1901,7 +1904,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Sadio Man√©",
+        "Name": "Sadio Mane",
         "Club": "Liverpool FC",
         "Nationality": "SEN",
         "Position": "FW",
@@ -1941,7 +1944,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Thiago Alc√°ntara",
+        "Name": "Thiago Alcantara",
         "Club": "Liverpool FC",
         "Nationality": "ESP",
         "Position": "MF",
@@ -2081,7 +2084,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jo√´l Matip",
+        "Name": "Joel Matip",
         "Club": "Liverpool FC",
         "Nationality": "CMR",
         "Position": "DF",
@@ -2121,7 +2124,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Naby Ke√Øta",
+        "Name": "Naby Keita",
         "Club": "Liverpool FC",
         "Nationality": "GUI",
         "Position": "MF",
@@ -2201,7 +2204,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Adri√°n",
+        "Name": "Adrian",
         "Club": "Liverpool FC",
         "Nationality": "ESP",
         "Position": "GK",
@@ -2301,7 +2304,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Caoimh√≠n Kelleher",
+        "Name": "Caoimhin Kelleher",
         "Club": "Liverpool FC",
         "Nationality": "IRL",
         "Position": "GK",
@@ -2541,7 +2544,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "√áaƒülar S√∂y√ºnc√º",
+        "Name": "Caglar Soyuncu",
         "Club": "Leicester City",
         "Nationality": "TUR",
         "Position": "DF",
@@ -2621,7 +2624,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Ayoze P√©rez",
+        "Name": "Ayoze Perez",
         "Club": "Leicester City",
         "Nationality": "ESP",
         "Position": "MF,FW",
@@ -2761,7 +2764,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Cengiz √únder",
+        "Name": "Cengiz Under",
         "Club": "Leicester City",
         "Nationality": "TUR",
         "Position": "MF,FW",
@@ -2881,7 +2884,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Tom√°≈° Souƒçek",
+        "Name": "Tomas Soucek",
         "Club": "West Ham United",
         "Nationality": "CZE",
         "Position": "MF",
@@ -2921,7 +2924,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "≈Åukasz Fabia≈Ñski",
+        "Name": "Lukasz Fabianski",
         "Club": "West Ham United",
         "Nationality": "POL",
         "Position": "GK",
@@ -2941,7 +2944,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Vladim√≠r Coufal",
+        "Name": "Vladimir Coufal",
         "Club": "West Ham United",
         "Nationality": "CZE",
         "Position": "DF",
@@ -3121,7 +3124,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Sa√Ød Benrahma",
+        "Name": "Said Benrahma",
         "Club": "West Ham United",
         "Nationality": "ALG",
         "Position": "FW,MF",
@@ -3141,7 +3144,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Fabi√°n Balbuena",
+        "Name": "Fabian Balbuena",
         "Club": "West Ham United",
         "Nationality": "PAR",
         "Position": "DF",
@@ -3181,7 +3184,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "S√©bastien Haller",
+        "Name": "Sebastien Haller",
         "Club": "West Ham United",
         "Nationality": "CIV",
         "Position": "FW",
@@ -3361,7 +3364,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Pierre H√∏jbjerg",
+        "Name": "Pierre Hojbjerg",
         "Club": "Tottenham Hotspur",
         "Nationality": "DEN",
         "Position": "MF",
@@ -3481,7 +3484,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Sergio Reguil√≥n",
+        "Name": "Sergio Reguilon",
         "Club": "Tottenham Hotspur",
         "Nationality": "ESP",
         "Position": "DF",
@@ -3541,7 +3544,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Davinson S√°nchez",
+        "Name": "Davinson Sanchez",
         "Club": "Tottenham Hotspur",
         "Nationality": "COL",
         "Position": "DF",
@@ -3781,7 +3784,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "√ârik Lamela",
+        "Name": "Erik Lamela",
         "Club": "Tottenham Hotspur",
         "Nationality": "ARG",
         "Position": "FW,MF",
@@ -3801,7 +3804,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Carlos Vin√≠cius",
+        "Name": "Carlos Vinicius",
         "Club": "Tottenham Hotspur",
         "Nationality": "BRA",
         "Position": "FW",
@@ -3961,7 +3964,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "H√©ctor Beller√≠n",
+        "Name": "Hector Bellerin",
         "Club": "Arsenal",
         "Nationality": "ESP",
         "Position": "DF",
@@ -4121,7 +4124,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Nicolas P√©p√©",
+        "Name": "Nicolas Pepe",
         "Club": "Arsenal",
         "Nationality": "CIV",
         "Position": "FW",
@@ -4161,7 +4164,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Pablo Mar√≠",
+        "Name": "Pablo Mari",
         "Club": "Arsenal",
         "Nationality": "ESP",
         "Position": "DF",
@@ -4181,7 +4184,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Martin √òdegaard",
+        "Name": "Martin Odegaard",
         "Club": "Arsenal",
         "Nationality": "NOR",
         "Position": "MF",
@@ -4221,7 +4224,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "C√©dric Soares",
+        "Name": "Cedric Soares",
         "Club": "Arsenal",
         "Nationality": "POR",
         "Position": "DF",
@@ -4341,7 +4344,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Sead Kola≈°inac",
+        "Name": "Sead Kolasinac",
         "Club": "Arsenal",
         "Nationality": "BIH",
         "Position": "DF",
@@ -4401,7 +4404,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "R√∫nar Alex R√∫narsson",
+        "Name": "Runar Alex Runarsson",
         "Club": "Arsenal",
         "Nationality": "ISL",
         "Position": "GK",
@@ -4701,7 +4704,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "H√©lder Costa",
+        "Name": "Helder Costa",
         "Club": "Leeds United",
         "Nationality": "POR",
         "Position": "MF,FW",
@@ -4761,7 +4764,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Pablo Hern√°ndez",
+        "Name": "Pablo Hernandez",
         "Club": "Leeds United",
         "Nationality": "ESP",
         "Position": "MF",
@@ -5001,7 +5004,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Abdoulaye Doucour√©",
+        "Name": "Abdoulaye Doucoure",
         "Club": "Everton",
         "Nationality": "FRA",
         "Position": "MF",
@@ -5041,7 +5044,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Gylfi Sigur√∞sson",
+        "Name": "Gylfi Sigurosson",
         "Club": "Everton",
         "Nationality": "ISL",
         "Position": "MF",
@@ -5101,7 +5104,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "James Rodr√≠guez",
+        "Name": "James Rodriguez",
         "Club": "Everton",
         "Nationality": "COL",
         "Position": "FW,MF",
@@ -5121,7 +5124,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "S√©amus Coleman",
+        "Name": "Seamus Coleman",
         "Club": "Everton",
         "Nationality": "IRL",
         "Position": "DF,MF",
@@ -5141,7 +5144,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Andr√© Gomes",
+        "Name": "Andre Gomes",
         "Club": "Everton",
         "Nationality": "POR",
         "Position": "MF",
@@ -5361,7 +5364,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jo√£o Virg√≠nia",
+        "Name": "Joao Virginia",
         "Club": "Everton",
         "Nationality": "POR",
         "Position": "GK",
@@ -5461,7 +5464,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Emiliano Mart√≠nez",
+        "Name": "Emiliano Martinez",
         "Club": "Aston Villa",
         "Nationality": "ARG",
         "Position": "GK",
@@ -5601,7 +5604,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Bertrand Traor√©",
+        "Name": "Bertrand Traore",
         "Club": "Aston Villa",
         "Nationality": "BFA",
         "Position": "FW",
@@ -5701,7 +5704,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Tr√©z√©guet",
+        "Name": "Trezeguet",
         "Club": "Aston Villa",
         "Nationality": "EGY",
         "Position": "FW",
@@ -5961,7 +5964,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Miguel Almir√≥n",
+        "Name": "Miguel Almiron",
         "Club": "Newcastle United",
         "Nationality": "PAR",
         "Position": "MF,FW",
@@ -6001,7 +6004,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Federico Fern√°ndez",
+        "Name": "Federico Fernandez",
         "Club": "Newcastle United",
         "Nationality": "ARG",
         "Position": "DF",
@@ -6281,7 +6284,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Fabian Sch√§r",
+        "Name": "Fabian Schar",
         "Club": "Newcastle United",
         "Nationality": "SUI",
         "Position": "DF",
@@ -6301,7 +6304,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Martin D√∫bravka",
+        "Name": "Martin Dubravka",
         "Club": "Newcastle United",
         "Nationality": "SVK",
         "Position": "GK",
@@ -6481,7 +6484,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Rui Patr√≠cio",
+        "Name": "Rui Patricio",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "GK",
@@ -6521,7 +6524,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "N√©lson Semedo",
+        "Name": "Nelson Semedo",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "DF",
@@ -6541,7 +6544,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "R√∫ben Neves",
+        "Name": "Ruben Neves",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "MF",
@@ -6581,7 +6584,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Adama Traor√©",
+        "Name": "Adama Traore",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "ESP",
         "Position": "FW",
@@ -6601,7 +6604,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jo√£o Moutinho",
+        "Name": "Joao Moutinho",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "MF",
@@ -6641,7 +6644,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Romain Sa√Øss",
+        "Name": "Romain Saiss",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "MAR",
         "Position": "DF",
@@ -6701,7 +6704,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Rayan A√Øt Nouri",
+        "Name": "Rayan Ait Nouri",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "FRA",
         "Position": "DF",
@@ -6741,7 +6744,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Willian Jos√©",
+        "Name": "Willian Jose",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "BRA",
         "Position": "FW",
@@ -6761,7 +6764,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "F√°bio Silva",
+        "Name": "Fabio Silva",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "FW",
@@ -6781,7 +6784,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Ra√∫l Jim√©nez",
+        "Name": "Raul Jimenez",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "MEX",
         "Position": "FW",
@@ -6801,7 +6804,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Fernando Mar√ßal",
+        "Name": "Fernando Marcal",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "BRA",
         "Position": "DF",
@@ -6921,7 +6924,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "R√∫ben Vinagre",
+        "Name": "Ruben Vinagre",
         "Club": "Wolverhampton Wanderers",
         "Nationality": "POR",
         "Position": "DF",
@@ -7041,7 +7044,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Cheikhou Kouyat√©",
+        "Name": "Cheikhou Kouyate",
         "Club": "Crystal Palace",
         "Nationality": "SEN",
         "Position": "DF",
@@ -7241,7 +7244,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Ja√Øro Riedewald",
+        "Name": "Jairo Riedewald",
         "Club": "Crystal Palace",
         "Nationality": "NED",
         "Position": "MF",
@@ -8201,7 +8204,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Pascal Gro√ü",
+        "Name": "Pascal Groß",
         "Club": "Brighton",
         "Nationality": "GER",
         "Position": "MF,DF",
@@ -8221,7 +8224,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Robert S√°nchez",
+        "Name": "Robert Sanchez",
         "Club": "Brighton",
         "Nationality": "ESP",
         "Position": "GK",
@@ -8241,7 +8244,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jo√´l Veltman",
+        "Name": "Joel Veltman",
         "Club": "Brighton",
         "Nationality": "NED",
         "Position": "DF",
@@ -8481,7 +8484,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Davy Pr√∂pper",
+        "Name": "Davy Propper",
         "Club": "Brighton",
         "Nationality": "NED",
         "Position": "MF",
@@ -8561,7 +8564,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Jos√© Izquierdo",
+        "Name": "Jose Izquierdo",
         "Club": "Brighton",
         "Nationality": "COL",
         "Position": "DF,MF",
@@ -8801,7 +8804,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "J√≥hann Berg Gu√∞mundsson",
+        "Name": "Johann Berg Guomundsson",
         "Club": "Burnley",
         "Nationality": "ISL",
         "Position": "MF",
@@ -9581,7 +9584,7 @@ playerData=[
         "Red_Cards": "1"
     },
     {
-        "Name": "Marek Rod√°k",
+        "Name": "Marek Rodak",
         "Club": "Fulham",
         "Nationality": "SVK",
         "Position": "GK",
@@ -9901,7 +9904,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Okay Yoku≈ülu",
+        "Name": "Okay Yokuslu",
         "Club": "West Bromwich Albion",
         "Nationality": "TUR",
         "Position": "MF",
@@ -10822,6 +10825,7 @@ playerData=[
     }
 ]
 
+
 function getName(player){
     return(player.Name)
 }
@@ -10869,3 +10873,4 @@ function getYellow_Cards(player){
 function getRed_Cards(player){
     return(player.Red_Cards)
 }
+
