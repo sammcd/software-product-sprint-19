@@ -384,7 +384,7 @@ playerData=[
         "Red_Cards": "0"
     },
     {
-        "Name": "Mateo Kovaƒçiƒá",
+        "Name": "Mateo Kovacic",
         "Club": "Chelsea",
         "Nationality": "CRO",
         "Position": "MF",
