@@ -4,10 +4,9 @@ var color1 = "#2e9e07"; //green
 var color2 = "#e3db0b"; //yellow
 
 
-// //have to call this function to get the random player
-// function getPlayer(){
-//     // randomly select valid player from playerData
-// }
+// size of playerData = 532 ... Generate random number/player
+var random = Math.floor(Math.random() * 532);
+
 
 function addRow() {
     if (!finished){
@@ -31,9 +30,9 @@ function addRow() {
         var playerGoals=getGoals(player_guessed);
         var playerAssists=getAssists(player_guessed);
 
+        // randomly select valid player from playerData
+        var player = playerData[random];
 
-        //will be taken out after the first function is figured out [DELETE!!!!  later]
-        var player = playerData[1];
 
         // this variable is passed in from the User
         var guess = playerName;
@@ -159,9 +158,14 @@ function addRow() {
         row.insertCell(9).innerHTML= '<input value="' +  playerAssists +'"'+ 'style="background-color:' + assist_color+ '">';
 
 
-       
+        // if (finished) {
+        //    console.log(CONGRATULATIONS! YOU ARE A TRUE SOCCER GENIUS);
+        // }
     }
+    // print YOU LOST
+    // REVEAL PLAYER
 }
+
 
 function deleteRow(obj) {
       
