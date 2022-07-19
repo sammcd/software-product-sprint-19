@@ -1,8 +1,9 @@
 var count_guesses = 1;
 var finished = false;
+var won = false;
+var lost = false;
 var color1 = "#2e9e07"; //green
 var color2 = "#e3db0b"; //yellow
-
 
 // size of playerData = 532 ... Generate random number/player
 var random = Math.floor(Math.random() * 532);
@@ -33,7 +34,6 @@ function addRow() {
         // randomly select valid player from playerData
         var player = playerData[random];
 
-
         // this variable is passed in from the User
         var guess = playerName;
 
@@ -53,6 +53,7 @@ function addRow() {
         // keeps track if whether finished
         if (count_guesses == 8) {
             finished = true;
+            lost = true;
         } else {
             count_guesses ++;
         }
@@ -61,6 +62,8 @@ function addRow() {
 
         if (guessData.Name == player.Name) {
             finished = true;
+            won = true;
+            lost = false;
             name_color = color1;
             club_color = color1;
             position_color = color1;
@@ -157,13 +160,28 @@ function addRow() {
         row.insertCell(8).innerHTML= '<input value="' +  playerGoals +'"'+ 'style="background-color:' + goal_color + '">';
         row.insertCell(9).innerHTML= '<input value="' +  playerAssists +'"'+ 'style="background-color:' + assist_color+ '">';
 
+        }
 
-        // if (finished) {
-        //    console.log(CONGRATULATIONS! YOU ARE A TRUE SOCCER GENIUS);
-        // }
+        if (won) {
+           window.alert("CONGRATULATIONS🏆🏆🏆 YOU'RE A TRUE SOCCER⚽️ GENIUS 🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳");
+        } 
+        
+        if (lost) {
+            window.alert("OH NO! YOU LOST😔. REVEAL PLAYER?👤");
+        
+            row.insertCell(0).innerHTML= '<input value="' +  player.Name +'"'+ 'style="background-color:' + color1+ '">';
+            row.insertCell(1).innerHTML= '<input value="' +  player.Club +'"'+ 'style="background-color:' + color1+ '">';
+            row.insertCell(2).innerHTML= '<input value="' +  player.Nationality +'"'+ 'style="background-color:' + color1+ '">';
+            row.insertCell(3).innerHTML= '<input value="' +  player.Position +'"'+ 'style="background-color:' + color1+ '">';
+            row.insertCell(4).innerHTML= '<input value="' +  player.Age +'"'+ 'style="background-color:' + color1 + '">';
+            row.insertCell(5).innerHTML= '<input value="' +  player.Matches +'"'+ 'style="background-color:' + color1+ '">';
+            row.insertCell(6).innerHTML= '<input value="' +  player.Starts +'"'+ 'style="background-color:' + color1 + '">';
+            row.insertCell(7).innerHTML= '<input value="' +  player.Mins +'"'+ 'style="background-color:' + color1 + '">';
+            row.insertCell(8).innerHTML= '<input value="' +  player.Goals +'"'+ 'style="background-color:' + color1 + '">';
+            row.insertCell(9).innerHTML= '<input value="' +  player.Assists +'"'+ 'style="background-color:' + color1+ '">';
+           
     }
-    // print YOU LOST
-    // REVEAL PLAYER
+    
 }
 
 
