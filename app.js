@@ -2,8 +2,8 @@ var count_guesses = 1;
 var finished = false;
 var won = false;
 var lost = false;
-var color1 = "#2e9e07"; //green
-var color2 = "#e3db0b"; //yellow
+var color1 = "#D0F0C0"; //green
+var color2 = "#FFF9A6"; //yellow
 
 // size of playerData = 532 ... Generate random number/player
 var random = Math.floor(Math.random() * 532);
@@ -41,17 +41,22 @@ function addRow() {
         var guess = playerName;
 
         // initiaties color variables for each category, these will change with each guess
-        var name_color = "#87CEEB";
-        var club_color = "#87CEEB";
-        var position_color = "#87CEEB";
-        var goal_color = "#87CEEB";
-        var assist_color = "#87CEEB";
-        var age_color = "#87CEEB";
-        var nationality_color = "#87CEEB";
-        var mins_color = "#87CEEB";
-        var starts_color = "#87CEEB";
-        var matches_color = "#87CEEB";
-
+        var name_color = "#FFFFFF";
+        var club_color = "#FFFFFF";
+        var position_color = "#FFFFFF";
+        var goal_color = "#FFFFFF";
+        var assist_color = "#FFFFFF";
+        var age_color = "#FFFFFF";
+        var nationality_color = "#FFFFFF";
+        var mins_color = "#FFFFFF";
+        var starts_color = "#FFFFFF";
+        var matches_color = "#FFFFFF";
+        var age_arrow = " ↑ ";
+        var matches_arrow = " ↑ ";
+        var starts_arrow = " ↑ ";
+        var mins_arrow = " ↑ ";
+        var goals_arrow = " ↑ ";
+        var assists_arrow = " ↑ ";
         // counts the number of guesses to finish
         // keeps track if whether finished
         if (count_guesses == 8) {
@@ -103,14 +108,25 @@ function addRow() {
             } else if (goal_dif <= 5) {
                 goal_color = color2;
             }	
-            
+            if(guessData.Goals>player.Goals){
+                goals_arrow = " ↓ "
+            }
+            else if(guessData.Goals == player.Goals){
+                goals_arrow = ""
+            }           
             // check assists
             var assist_dif = Math.abs(guessData.Assists - player.Assists);
             if (assist_dif == 0) {
                 assist_color = color1;
             } else if (assist_dif <= 2) {
                 assist_color = color2;
-            }	
+            }
+            if(guessData.Assists>player.Assists){
+                assists_arrow = " ↓ "
+            }
+            else if(guessData.Assists == player.Assists){
+                assists_arrow = ""
+            } 	
             
             // check age
             var age_dif = Math.abs(guessData.Age - player.Age);
@@ -119,7 +135,12 @@ function addRow() {
             } else if (age_dif <= 3) {
                 age_color = color2;
             }
-
+            if(guessData.Age>player.Age){
+                age_arrow = " ↓ "
+            }
+            else if(guessData.Age == player.Age){
+                age_arrow= ""
+            }
             // check matches
             var matches_dif = Math.abs(guessData.Matches - player.Matches);
             if (matches_dif == 0) {
@@ -127,7 +148,12 @@ function addRow() {
             } else if (matches_dif <= 3) {
                 matches_color = color2;
             }
-
+            if(guessData.Matches>player.Matches){
+                matches_arrow = " ↓ "
+            }
+            else if(guessData.Matches == player.Matches){
+                matches_arrow = ""
+            }
             // check starts
             var starts_dif = Math.abs(guessData.Starts - player.Starts);
             if (starts_dif == 0) {
@@ -135,7 +161,13 @@ function addRow() {
             } else if (starts_dif <= 3) {
                 starts_color = color2;
             }
-
+            if(guessData.Starts>player.Starts){
+                starts_arrow = " ↓ "
+            }
+            else if(guessData.Starts == player.Starts){
+                starts_arrow = ""
+            }
+            //
             // check mins
             var mins_dif = Math.abs(guessData.Mins - player.Mins);
             if (mins_dif == 0) {
@@ -143,7 +175,12 @@ function addRow() {
             } else if (mins_dif <= 200) {
                 mins_color = color2;
             }
-
+            if(guessData.Mins>player.Mins){
+                mins_arrow = " ↓ "
+            }
+            else if(guessData.Mins == player.Mins){
+                mins_arrow = ""
+            }
         }
 
         var table = document.getElementById("myTableData");
@@ -152,16 +189,16 @@ function addRow() {
         var row = table.insertRow(rowCount);
 
         // row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
-        row.insertCell(0).innerHTML= '<input value="' +  playerName +'"'+ 'style="background-color:' + name_color+ '">';
+        row.insertCell(0).innerHTML= '<input value="' +  playerName+'"'+ 'style="background-color:' + name_color+ '">';
         row.insertCell(1).innerHTML= '<input value="' +  playerclub +'"'+ 'style="background-color:' + club_color+ '">';
         row.insertCell(2).innerHTML= '<input value="' +  playerNationality +'"'+ 'style="background-color:' + nationality_color+ '">';
         row.insertCell(3).innerHTML= '<input value="' +  playerPosition +'"'+ 'style="background-color:' + position_color+ '">';
-        row.insertCell(4).innerHTML= '<input value="' +  playerAge +'"'+ 'style="background-color:' + age_color + '">';
-        row.insertCell(5).innerHTML= '<input value="' +  playerMatches +'"'+ 'style="background-color:' + matches_color+ '">';
-        row.insertCell(6).innerHTML= '<input value="' +  playerStarts +'"'+ 'style="background-color:' + starts_color + '">';
-        row.insertCell(7).innerHTML= '<input value="' +  playerMins +'"'+ 'style="background-color:' + mins_color + '">';
-        row.insertCell(8).innerHTML= '<input value="' +  playerGoals +'"'+ 'style="background-color:' + goal_color + '">';
-        row.insertCell(9).innerHTML= '<input value="' +  playerAssists +'"'+ 'style="background-color:' + assist_color+ '">';
+        row.insertCell(4).innerHTML= '<input value="' +  playerAge + age_arrow +'"'+ 'style="background-color:' + age_color + '">';
+        row.insertCell(5).innerHTML= '<input value="' +  playerMatches + matches_arrow +'"'+ 'style="background-color:' + matches_color+ '">';
+        row.insertCell(6).innerHTML= '<input value="' +  playerStarts + starts_arrow +'"'+ 'style="background-color:' + starts_color + '">';
+        row.insertCell(7).innerHTML= '<input value="' +  playerMins + mins_arrow +'"'+ 'style="background-color:' + mins_color + '">';
+        row.insertCell(8).innerHTML= '<input value="' +  playerGoals + goals_arrow +'"'+ 'style="background-color:' + goal_color + '">';
+        row.insertCell(9).innerHTML= '<input value="' +  playerAssists + assists_arrow +'"'+ 'style="background-color:' + assist_color+ '">';
 
         }
 
@@ -10898,4 +10935,3 @@ function getYellow_Cards(player){
 function getRed_Cards(player){
     return(player.Red_Cards)
 }
-
