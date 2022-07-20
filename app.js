@@ -8,6 +8,9 @@ var color2 = "#e3db0b"; //yellow
 // size of playerData = 532 ... Generate random number/player
 var random = Math.floor(Math.random() * 532);
 
+function gameGuide(){
+    window.alert("GAME MANUAL\nThis game is similar but unique to most wordles.\nStart by entering a player into the 'Guess here' box and clicking on the add button to make the Guess. Then the game begins!\nYou have 8 chances in total to guess correctly the player of the day. After every guess, your guessed player's statistics will be compared with the player of the day's and the result color coded on the table. Green means you have guessed right whichever statistic that is, yellow means you're extremely close to guessing the right statistic of the player of the day, and no color change means its just wrong or too far from being the right answer.\n The good thing about this wordle is you can always refresh the page after a game to play another one, and the system will automatically selcect a new player of the day to be guessed.\n LET THE CHALLENGE BEGIN!!!");
+}
 
 function addRow() {
     if (!finished){
@@ -163,12 +166,15 @@ function addRow() {
         }
 
         if (won) {
-           window.alert("CONGRATULATIONS🏆🏆🏆 YOU'RE A TRUE SOCCER⚽️ GENIUS 🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳");
+           window.alert("CONGRATULATIONS!!! YOU WON! 🏆🏆🏆 YOU'RE A TRUE SOCCER⚽️ GENIUS 🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳");
         } 
         
         if (lost) {
             window.alert("OH NO! YOU LOST😔. REVEAL PLAYER?👤");
         
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+
             row.insertCell(0).innerHTML= '<input value="' +  player.Name +'"'+ 'style="background-color:' + color1+ '">';
             row.insertCell(1).innerHTML= '<input value="' +  player.Club +'"'+ 'style="background-color:' + color1+ '">';
             row.insertCell(2).innerHTML= '<input value="' +  player.Nationality +'"'+ 'style="background-color:' + color1+ '">';
