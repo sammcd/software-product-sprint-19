@@ -209,6 +209,7 @@ function addRow() {
         row.insertCell(8).innerHTML= '<input value="' +  playerGoals + goals_arrow +'"'+ 'style="background-color:' + goal_color + '">';
         row.insertCell(9).innerHTML= '<input value="' +  playerAssists + assists_arrow +'"'+ 'style="background-color:' + assist_color+ '">';
 
+        playerNameinput.value = '';
         }
 
         if (won) {
