@@ -37,6 +37,7 @@ thead th {
   padding:20px;
   @include background-image(linear-gradient(#646f7f, #4a5564));
   border-top:1px solid #858d99;
+
   
   &:first-child {
    @include border-top-left-radius(5px); 
@@ -81,7 +82,7 @@ header{
 
 
 footer{ 
-    position:absolute; 
+    position:fixed; 
     bottom:0; 
     width:100%; 
     height:80px;
@@ -90,9 +91,6 @@ footer{
     background:black; 
 
   }
-
-
-
 
 button {
   background-color: #fbeee0;
